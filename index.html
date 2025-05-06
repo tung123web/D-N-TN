@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ Thiết Kế Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            background: url('https://images.unsplash.com/photo-1506748686212-58e61e94f6f3?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhY2h8MXx8Y29tcGxleCUyMHBhZ2V8ZW58MHx8fHwxNjc5NzA1Njk2&ixlib=rb-1.2.1&q=80&w=1080') center/cover no-repeat;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .img-service {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        /* Zalo chat */
+        .zalo-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        /* Dự án */
+        .project-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .project-category {
+            font-weight: bold;
+        }
+        /* Footer */
+        .footer-logo {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        .footer-social a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .footer-social a:hover {
+            color: #ffcb05;
+        }
+        .hero {
+      background: linear-gradient(to right, #813b4c, #a90a20);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+   
+    /* Navbar Custom Styles */
+.custom-navbar {
+    background-color: #9e1857; /* Màu tối */
+    box-shadow: 0 4px 6px rgba(151, 25, 25, 0.1);
+    background: linear-gradient(to right, #ad2041, #4b3437);
+    padding: 20px;
+}
+
+.custom-navbar .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.custom-navbar .navbar-brand i {
+    font-size: 1.8rem;
+}
+
+.custom-navbar .nav-link {
+    color: #ddd;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    color: #ffffff;
+}
+
+.custom-navbar .navbar-toggler {
+    border: none;
+}
+
+.custom-navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+/* Footer Custom Styles */
+.custom-footer {
+    background-color: #121212;
+    color: #ffffff;
+    background: linear-gradient(to right, #4b3238, #72373f);
+}
+
+.custom-footer .footer-logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.custom-footer .footer-logo i {
+    font-size: 1.8rem;
+}
+
+.custom-footer ul li {
+    margin-bottom: 0.75rem;
+}
+
+.custom-footer ul li a {
+    transition: color 0.3s ease;
+}
+
+.custom-footer ul li a:hover {
+    color: #0d6efd;
+}
+
+.custom-footer a.text-white {
+    transition: color 0.3s ease;
+}
+
+.custom-footer a.text-white:hover {
+    color: #0d6efd;
+}
+
+.custom-footer hr {
+    opacity: 0.2;
+}
+
+.custom-footer iframe {
+    border-radius: 8px;
+}
+.btn{
+color: #100505;
+background-color: #ddd
+};
+#web-design {
+    background-color: #f8f9fa;
+}
+
+#web-design .container {
+    max-width: 1200px;
+}
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #28a745; /* Chọn màu xanh lá cho tiêu đề */
+    margin-bottom: 15px;
+}
+
+.service-description {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.text-primary {
+    color: #007bff !important; /* Tùy chỉnh màu cho tiêu đề chính */
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.bg-white {
+    background-color: #ffffff !important;
+}
+
+.rounded {
+    border-radius: 10px !important;
+}
+
+    </style>
+</head>
+<body>
+   
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm custom-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            <i class="bi bi-globe2 me-2"></i>WebDesignPro
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Trang Chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Dịch Vụ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Dự Án</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Bảng Giá</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<section class="hero">
+    <div class="container">
+      <h1>Thiết Kế Website Chuyên Nghiệp</h1>
+      <p>Giúp doanh nghiệp bạn nổi bật trên môi trường số</p>
+      <a href="contact.html" class="btn btn-primary">Liên Hệ Ngay</a>
+    </div>
+  </section>
+
+    <!-- Services -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Dịch Vụ Của Chúng Tôi</h2>
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <img src="data:image/jpeg;base64,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" alt="Doanh Nghiệp" class="img-service mb-3">
+                    <h5>Website Doanh Nghiệp</h5>
+                    <p>Thiết kế chuẩn SEO, giao diện đẹp, tối ưu trên mọi thiết bị. Giúp doanh nghiệp bạn xây dựng hình ảnh chuyên nghiệp và tiếp cận khách hàng hiệu quả.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://edubit.vn/data/blog/photo_huong-dan-thiet-ke-trang-website-ban-hang.png_1600244143.jpg?v=1600244144" alt="Bán Hàng" class="img-service mb-3">
+                    <h5>Website Bán Hàng</h5>
+                    <p>Tích hợp giỏ hàng, thanh toán online, quản lý đơn hàng dễ dàng. Chúng tôi giúp bạn xây dựng cửa hàng trực tuyến với các tính năng vượt trội.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://www.thietkewebthuonghieu.com/wp-content/uploads/2021/11/cham-soc-web-4.jpg" alt="Bảo Trì" class="img-service mb-3">
+                    <h5>Chăm Sóc & Bảo Trì</h5>
+                    <p>Hỗ trợ kỹ thuật, backup dữ liệu, nâng cấp website định kỳ. Chúng tôi luôn đồng hành để giữ cho website của bạn hoạt động ổn định và an toàn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Dự Án Của Chúng Tôi</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://img.lsvn.vn/uploads/photos/13/1/60dc31fe0dc6d.png" alt="Dự Án 1" class="project-image">
+                        <div class="card-body">
+                            <h5 class="project-category">Dự Án Doanh Nghiệp</h5>
+                            <p class="card-text">Một trong những dự án thiết kế website doanh nghiệp chuyên nghiệp, tối ưu SEO và trải nghiệm người dùng.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://acabiz.vn/backend/images/blog_images/crop/699430741.jpg" alt="Dự Án 2" class="project-image">
+                        <div class="card-body">
+                            <h5 class="project-category">Dự Án Bán Hàng</h5>
+                            <p class="card-text">Cửa hàng trực tuyến với khả năng thanh toán trực tuyến và quản lý sản phẩm dễ dàng.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhY2h8M3x8Y29tcGxleCUyMHBhZ2V8ZW58MHx8fHwxNjc5NzA1Njk2&ixlib=rb-1.2.1&q=80&w=1080" alt="Dự Án 3" class="project-image">
+                        <div class="card-body">
+                            <h5 class="project-category">Dự Án Cao Cấp</h5>
+                            <p class="card-text">Dự án phức tạp với các tính năng đặc biệt, bao gồm bảo mật cao và tối ưu hóa tốc độ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Bảng Giá Thiết Kế Website</h2>
+            <div class="row g-4">
+    
+                <!-- Gói Cơ Bản -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top rounded-top" alt="Gói Cơ Bản">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Gói Cơ Bản</h5>
+                            <h6 class="card-price text-primary fs-4">5.000.000đ</h6>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>5 Trang cơ bản</li>
+                                <li>Chuẩn SEO</li>
+                                <li>Responsive Mobile</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline-primary rounded-pill">Chọn Gói</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Gói Nâng Cao -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow border-primary border-2">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top rounded-top" alt="Gói Nâng Cao">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-primary">Gói Nâng Cao</h5>
+                            <h6 class="card-price text-primary fs-4">10.000.000đ</h6>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>10 Trang + Blog</li>
+                                <li>Tối ưu tốc độ</li>
+                                <li>Bảo hành 1 năm</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary rounded-pill">Chọn Gói</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Gói Cao Cấp -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top rounded-top" alt="Gói Cao Cấp">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Gói Cao Cấp</h5>
+                            <h6 class="card-price text-primary fs-4">15.000.000đ</h6>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Tùy biến theo yêu cầu</li>
+                                <li>Miễn phí hosting 1 năm</li>
+                                <li>Chăm sóc trọn gói</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline-primary rounded-pill">Chọn Gói</a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <section id="web-design" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4 text-primary">Dịch Vụ Thiết Kế Web Chuyên Nghiệp</h2>
+                <div class="row text-center">
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="service-card shadow-sm p-4 bg-white rounded">
+                            <h5 class="service-title text-success">Thiết Kế Giao Diện Web</h5>
+                            <p class="service-description">Chúng tôi cung cấp dịch vụ thiết kế giao diện web đẹp mắt, dễ sử dụng, tối ưu cho người dùng và thân thiện với các thiết bị di động.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="service-card shadow-sm p-4 bg-white rounded">
+                            <h5 class="service-title text-success">Phát Triển Web Theo Yêu Cầu</h5>
+                            <p class="service-description">Chúng tôi xây dựng các website hoàn chỉnh theo yêu cầu, từ các website doanh nghiệp cho đến các hệ thống web phức tạp hơn như thương mại điện tử.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="service-card shadow-sm p-4 bg-white rounded">
+                            <h5 class="service-title text-success">SEO & Tối Ưu Hóa</h5>
+                            <p class="service-description">Website của bạn sẽ được tối ưu hóa cho các công cụ tìm kiếm (SEO), giúp tăng trưởng lưu lượng truy cập và nâng cao hiệu quả kinh doanh.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="service-card shadow-sm p-4 bg-white rounded">
+                            <h5 class="service-title text-success">Hỗ Trợ & Bảo Trì Web</h5>
+                            <p class="service-description">Chúng tôi cung cấp dịch vụ hỗ trợ và bảo trì website dài hạn, giúp website của bạn luôn hoạt động ổn định và được cập nhật thường xuyên.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="service-card shadow-sm p-4 bg-white rounded">
+                            <h5 class="service-title text-success">Ứng Dụng Web Tiện Ích</h5>
+                            <p class="service-description">Chúng tôi cung cấp các giải pháp ứng dụng web tùy chỉnh, giúp tăng cường tính năng và hiệu suất cho website của bạn.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="service-card shadow-sm p-4 bg-white rounded">
+                            <h5 class="service-title text-success">Chuyên Gia Thiết Kế Responsive</h5>
+                            <p class="service-description">Website được thiết kế để hoạt động tốt trên mọi thiết bị, từ điện thoại, máy tính bảng cho đến máy tính bàn, với giao diện đẹp mắt và dễ sử dụng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+          
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Khách Hàng Nói Gì?</h2>
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner text-center">
+              <div class="carousel-item active">
+                <blockquote class="blockquote">
+                  <p class="mb-4">"Dịch vụ tuyệt vời, website của tôi được tối ưu rất tốt!"</p>
+                  <footer class="blockquote-footer">Anh Minh, CEO ABC Corp</footer>
+                </blockquote>
+              </div>
+              <div class="carousel-item">
+                <blockquote class="blockquote">
+                  <p class="mb-4">"Tôi rất hài lòng với sự hỗ trợ và chăm sóc khách hàng."</p>
+                  <footer class="blockquote-footer">Chị Lan, Chủ shop Lan's Boutique</footer>
+                </blockquote>
+              </div>
+              <div class="carousel-item">
+                <blockquote class="blockquote">
+                  <p class="mb-4">"Đội ngũ chuyên nghiệp, giao website đúng tiến độ."</p>
+                  <footer class="blockquote-footer">Anh Tuấn, Giám đốc Tuấn Media</footer>
+                </blockquote>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+    
+    <footer class="py-5 bg-dark text-white custom-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="footer-logo mb-3"><i class="bi bi-globe2 me-2"></i>WebDesignPro</h5>
+                    <p>Chúng tôi chuyên thiết kế website đẹp, tối ưu SEO và bảo mật. Cam kết mang đến giải pháp tốt nhất cho doanh nghiệp bạn.</p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i>84 Nguyễn Hữu Dật, Hải Châu, Đà Nẵng</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Liên Kết Nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none"><i class="bi bi-house-door-fill me-2"></i>Trang Chủ</a></li>
+                        <li><a href="#services" class="text-white text-decoration-none"><i class="bi bi-gear-fill me-2"></i>Dịch Vụ</a></li>
+                        <li><a href="#projects" class="text-white text-decoration-none"><i class="bi bi-briefcase-fill me-2"></i>Dự Án</a></li>
+                        <li><a href="#pricing" class="text-white text-decoration-none"><i class="bi bi-tag-fill me-2"></i>Bảng Giá</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none"><i class="bi bi-envelope-fill me-2"></i>Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Theo Dõi Chúng Tôi</h5>
+                    <a href="https://www.facebook.com/webdesignpro" target="_blank" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i></a>
+                    <a href="https://twitter.com/webdesignpro" target="_blank" class="text-white me-3 fs-5"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.instagram.com/webdesignpro" target="_blank" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+                    <div class="mt-4">
+                        <iframe src="https://www.google.com/maps?q=84+Nguyễn+Hữu+Dật,+Hải+Châu,+Đà+Nẵng&output=embed" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white mt-4">
+          
+        </div>
+    </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
